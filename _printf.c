@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 
 	va_list our_args;
 
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 	va_start(our_args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
