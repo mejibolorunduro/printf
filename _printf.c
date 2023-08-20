@@ -12,8 +12,8 @@ int _printf(const char *format, ...)
 	unsigned int i, str_tally, tally = 0;
 
 	va_list our_args;
-	va_start(our_args, format);
 
+	va_start(our_args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 		}
 		tally += 1;
 	}
-	
-	va_end (our_args);
+	va_end(our_args);
 	return (tally);
 }
